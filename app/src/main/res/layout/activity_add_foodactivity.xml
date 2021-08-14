@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".AddFoodactivity"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <EditText
+        android:id="@+id/edt_food_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_background"
+        android:hint="@string/taom_nomi"
+        android:textColorHint="@color/black"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/edt_food_products"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="@string/saqlash"
+        />
+
+    <EditText
+        android:id="@+id/edt_food_products"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.3"
+        android:background="@drawable/edit_background"
+        android:gravity="start"
+        android:textColorHint="@color/black"
+        android:hint="@string/kerakli_mahsulotlar"
+        android:padding="20dp"
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@id/edt_preparition_order"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_food_name" />
+
+    <EditText
+        android:id="@+id/edt_preparition_order"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        android:background="@drawable/edit_background"
+        android:gravity="start"
+        android:hint="@string/taom_tayyorlash_tartibi"
+        android:padding="20dp"
+        android:textColorHint="@color/black"
+
+        android:textAlignment="textStart"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_food_products" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintWidth_percent="0.35"
+        android:backgroundTint="@color/green"
+        android:text="@string/saqlash"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_preparition_order" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
